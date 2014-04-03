@@ -7,7 +7,7 @@ html, body, article, section, form, ul, li, form, input, button {
 	
 	-webkit-appearance:none;
 	
-	font:inherit;
+/*	font:inherit;*/
 	vertical-align:baseline;
 }
 
@@ -16,7 +16,7 @@ ul {
 }
 
 body {
-	font-size:18px;
+	font-size:22px;
 	font-family:Helvetica, sans-serif;
 	background:white;
 	line-height:135%;
@@ -24,8 +24,6 @@ body {
 
 input, button, .close-vocab-box {
 	display:inline-block;
-/*	border: 2px solid black;*/
-/*	border-radius:5px;*/
 	padding:4px 8px;
 }
 
@@ -35,6 +33,20 @@ button, .close-vocab-box {
 
 input[type="submit"]:hover, button:hover, .close-vocab-box:hover {
 	background:lightgreen;
+}
+
+a {
+	color:#288edf;
+	text-decoration:none;
+}
+
+a:hover {
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.texts-list {
+	font-size:22px;
 }
 
 /*-------- layout ----------*/
@@ -47,7 +59,7 @@ input[type="submit"]:hover, button:hover, .close-vocab-box:hover {
 	margin-left:auto;
 	margin-right:auto;
 	
-	padding:50px;
+	padding:15px;
 	
 	background:white;
 }
@@ -91,14 +103,14 @@ article.text {
 }
 
 
-@media (max-width:900px){
+/*@media (max-width:900px){
 	#menu-button {
 		width:100%;
 		font-size:150%;
 		padding-top:15px;
 		padding-bottom:15px;
 	}
-}
+}*/
 
 section.vocabulary {
 	display:block;
@@ -131,9 +143,27 @@ i.expansion.true {
 	background-position: 0 -186px; width: 12px; height: 12px;
 }
 
+.token {
+	font-size:22px;
+}
+
+.vocab-entry-buttons {
+	display:block;
+	float:right;
+	position:relative;
+}
+
+.vocab-entry-button {
+	display:block;
+	float:left;
+	position:relative;
+	margin:auto 10px;
+}
+
 button.edit {
 	display:inline-block;
 	position:relative;
+	align:right;
 	top:0px;
 
 	height:13px;
@@ -163,13 +193,13 @@ input.editable-input {
 	border-bottom:1px dashed #000;
 	background:transparent;
 	height:20px;
-	max-width:120px;
+/*	max-width:120px;*/
 }
 
 .editable-buttons > button {
 	display:inline-block;
 	position:relative;
-	padding:0px 5px;
+	padding:15px;
 	margin:0;
 	font-size:12px;
 	top:-3px;
@@ -181,6 +211,7 @@ input.editable-input {
 
 i.delete {
 	display:inline-block;
+	align:right;
 	height:12px;
 	width:12px;
 	background: url(<%= asset_path "icons-12.png" %>) no-repeat 0 0;
@@ -196,19 +227,16 @@ i.delete:active {
 	top:2px;
 }
 
-.close-vocab-box {
-	width:100%;
+#newTokenInput {
+	width:90%;
+	margin:5px 5%;
 }
 
-.vocab-box-buttons, .close-vocab-box {
-	margin-top:5px;
-	margin-bottom:5px;
+#newFormSubmit {
+	float:right;
+	margin:5px 5%;
 }
 
-.vocab-box-buttons:active, .close-vocab-box {
-	position:relative;
-	top:2px;
-}
 
 /*----------- MOBILE -------------*/
 /*@media (max-width: 640px) {*/
